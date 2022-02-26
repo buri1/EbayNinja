@@ -1,0 +1,10 @@
+.Header {
+    background-color: rgba(129, 119, 155, 0.37);
+    margin-top: -8px;
+    margin-bottom: -19px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
