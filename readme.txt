@@ -6,6 +6,6 @@ in case u face a CORS error while fetching data from back- to frontend, you migh
 
 "http://localhost:8002/results" from PROJECTEBAY/frontend/scraperfrontend/src/components/scraper/scraper.js
 
-with your local IP adress during development. this error wont occur when the application 
+with your local IP adress during development ("http://"IP":8002/results"). this error wont occur when the application 
 
 is deployed.
