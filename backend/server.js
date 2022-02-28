@@ -27,39 +27,9 @@ app.get('/hello',function(req,res){
   
 })
 
+app.use('/results', require('./routes/scraperRoutes')
 
-app.get('/results', (req,res) => {
-axios("https://www.ebay-kleinanzeigen.de/oculus/k0")
-.then(response => {
-
-  const html = response.data
-  const $ = cheerio.load(html)
-  const listings =[]
-
-  $('.lazyload-item', html).each(function(){
-
-    const AdTitle = $(this).find('.ellipsis').text()
-    const AdImg = $(this).find('.aditem-image div').attr("data-imgsrc")
-    const AdDescription =$(this).find('.aditem-main--middle--description').text()
-    const AdTime =$(this).find('.aditem-main--top--right').text()
-    const AdPlace=$(this).find('.aditem-main--top--left').text()
-
-
-    listings.push({
-      AdTitle, 
-      AdImg, 
-      AdDescription, 
-      AdTime, 
-      AdPlace
-    })
-
-  })
-// console.log(listings)
- res.json(listings)
-
-}) .catch(err => console.log(err))})
-
-
+)
 
 
 app.listen(PORT, () => {
