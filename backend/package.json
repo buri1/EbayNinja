@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon scraper.js",
+    "start": "nodemon server.js",
     "proxy": "http://localhost:4000"
   },
   "keywords": [],

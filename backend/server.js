@@ -36,7 +36,7 @@ axios("https://www.ebay-kleinanzeigen.de/oculus/k0")
   const $ = cheerio.load(html)
   const listings =[]
 
-  $('.ad-listitem', html).each(function(){
+  $('.lazyload-item', html).each(function(){
 
     const AdTitle = $(this).find('.ellipsis').text()
     const AdImg = $(this).find('.aditem-image div').attr("data-imgsrc")
