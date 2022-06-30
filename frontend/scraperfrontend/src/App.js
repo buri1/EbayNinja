@@ -18,27 +18,28 @@ const App = () => {
     <>
     <BrowserRouter>
     <Header/>
-    <div class="flex flex-row">
-    <Sidebar />
+    <div class="flex flex-row bg-gray-400">
+    <Sidebar/>
     <Routes>
-
+      
     <Route path="/" element={<Navigate to="/dashboard" />}/>
     
       <Route path="/Dashboard" element={
-              <div class="flex flex-row">
+              
                 <Dashboard/>
-              </div> 
+              
           }>
       </Route>
-      <Route path="/Inbox" element={<Inbox/>
+      <Route path="/Inbox" element={<Inbox />
 
       }>
       </Route>
-      <Route path="/Searchagent" element={<Searchagent/>
-
-}>
-</Route>
+      <Route path="/Searchagent" element={<Searchagent/>}>
+      </Route>
+      
+        
     </Routes>
+    
     </div>
 
     </BrowserRouter>

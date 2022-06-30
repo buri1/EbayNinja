@@ -2,7 +2,7 @@ import React from 'react'
 
 function Inbox() {
   return (
-    <div>Inbox</div>
+    <div class="w-6/12 bg-red-400">Inbox</div>
   )
 }
 

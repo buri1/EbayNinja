@@ -15,12 +15,12 @@ const Listings = ({ datas }) => {
                 <a
                   key={data.Id}
                   href="#"
-                  class="flex flex-col items-center bg-white rounded-lg border-teal-600 border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                  class="flex flex-col items-center bg-gray-200 rounded-lg border-4 border-teal-600  md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                   <div class="flex flex-row" >
                     <img
-                    class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                    class="object-cover w-full h-96 pl-2 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
                     src={data.AdImg}
-                    alt="AdImg"/> 
+                    alt="Couldnt Load Ad Image"/> 
                     </div>
                   
                   <div class="flex flex-col justify-between p-4 leading-normal">

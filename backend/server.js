@@ -31,6 +31,10 @@ app.use('/results', require('./routes/scraperRoutes')
 
 )
 
+app.use('/results/:SearchUrl', require('./routes/searchRoute')
+
+)
+
 
 app.listen(PORT, () => {
 console.log (`server started: Listening to Port ${PORT}`);
