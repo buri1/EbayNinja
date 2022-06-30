@@ -11,7 +11,7 @@ const router= express.Router()
 
 
 router.get('/', (req,res) => {
-    axios("https://www.ebay-kleinanzeigen.de/oculus/k0")
+    axios("https://www.ebay-kleinanzeigen.de/apple/k0")
     .then(response => {
     
       const html = response.data

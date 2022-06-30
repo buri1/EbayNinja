@@ -1,5 +1,9 @@
 .ListingCard {
-    background-color: rgba(90, 23, 2, 0.582);
+    background-color: rgba(13, 148, 136, 0.582);
   
   }
   
+
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
