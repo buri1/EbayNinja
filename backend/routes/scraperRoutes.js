@@ -22,9 +22,13 @@ router.get('/', (req,res) => {
     
         const AdTitle = $(this).find('.ellipsis').text()
         const AdImg = $(this).find('.aditem-image div').attr("data-imgsrc")
-        const AdDescription =$(this).find('.aditem-main--middle--description').text()
-        const AdTime =$(this).find('.aditem-main--top--right').text()
-        const AdPlace=$(this).find('.aditem-main--top--left').text()
+        const AdDescription =$(this).find('.aditem-main--middle--description').text().replace( /\n/g,'')
+        const AdTime =$(this).find('.aditem-main--top--right').text().replace( /\n/g,'')
+        const AdPlace=$(this).find('.aditem-main--top--left').text().replace( /\n/g,'')
+        const AdUrl =$(this).find('.ellipsis').attr('href')
+        const AdPrice =$(this).find('.aditem-main--middle--price').text().replace( /\n/g,'')
+        const AdUrlFinished= "https://www.ebay-kleinanzeigen.de"+ AdUrl
+
     
     
         listings.push({
@@ -32,7 +36,9 @@ router.get('/', (req,res) => {
           AdImg, 
           AdDescription, 
           AdTime, 
-          AdPlace
+          AdPlace,
+          AdPrice,
+          AdUrlFinished,
         })
     
       })
