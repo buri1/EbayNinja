@@ -6,7 +6,7 @@ import Sidebar from "../Sidebar/Sidebar"
 const Listings = ({ datas }) => {
   return (
     /* <div class="Main container flex flex-row"> */
-<div class="py-2"> 
+<div class="py-2 sm:mr-2 md:mr-0"> 
       <div class="List-items flex flex-row">
         <ul>
           {datas.map((data) => (

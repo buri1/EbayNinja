@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Dashboard from './components/Dashboard/Dashboard';
 import Inbox from './components/Inbox/Inbox';
 import Searchagent from './components/Searchagent/Searchagent';
+import Loginpage from './components/Loginpage/Loginpage';
 import {
   BrowserRouter,
   Routes,
@@ -22,7 +23,7 @@ const App = () => {
     <Sidebar/>
     <Routes>
       
-    <Route path="/" element={<Navigate to="/dashboard" />}/>
+    <Route path="/" element={<Loginpage/>}></Route>
     
       <Route path="/Dashboard" element={
               
