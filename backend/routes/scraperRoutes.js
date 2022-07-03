@@ -27,7 +27,7 @@ router.get('/', (req,res) => {
         const AdPlace=$(this).find('.aditem-main--top--left').text().replace( /\n/g,'')
         const AdUrl =$(this).find('.ellipsis').attr('href')
         const AdPrice =$(this).find('.aditem-main--middle--price').text().replace( /\n/g,'')
-        const AdUrlFinished= "https://www.ebay-kleinanzeigen.de"+ AdUrl
+        const AdUrlFinished= "https://www.ebay-kleinanzeigen.de"+  AdUrl
 
     
     
