@@ -10,8 +10,8 @@ const app = express()
 const router= express.Router()
 
 
-router.get('/results/:SearchUrl', (req,res) => {
-    axios("https://www.ebay-kleinanzeigen.de/apple/k0")
+router.post('/results/:SearchUrl', (req,res) => {
+    axios(`https://www.ebay-kleinanzeigen.de/${req.params.SearchUrl}/k0`)
     .then(response => {
     
       const html = response.data

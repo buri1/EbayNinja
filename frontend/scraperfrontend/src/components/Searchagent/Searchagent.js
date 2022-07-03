@@ -1,15 +1,23 @@
 import React from 'react'
 import Scraper from '../scraper/scraper'
+import Scraperv2 from '../Scraperv2/Scraperv2'
 
-function Searchagent() {
+
+
+function Searchagent(Searchkey) {
+
+
   return (
-    <div class="flex flex-col">
-        <Scraper class="w-9/12" />
-        <div class="w-3/12">
-            <h1>hello</h1>
+    
 
-        </div>
-    </div>
+              
+
+    <div class="flex flex-col">
+        <Scraperv2 class="w-9/12" />
+    </div> 
+
+
+   
 
   )
 }

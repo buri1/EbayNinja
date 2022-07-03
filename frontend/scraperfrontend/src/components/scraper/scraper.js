@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import "./scraper.css"
 import Listings from '../Listings/Listings';
 
 
