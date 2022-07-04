@@ -20,7 +20,7 @@ export default function Searchbutton({onNewSearch = f => f }) {
             value={URI}
             onChange={(event) => setURI(event.target.value)}
             name="Search Item"
-            class="block py-2.5 px-0 w-full  text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer"
+            class="block py-2.5 px-0 w-full  text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer"
             placeholder=" "
             required
           />
