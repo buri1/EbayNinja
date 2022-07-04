@@ -5,7 +5,7 @@ import { useState , useEffect } from "react";
 
 export default function Searchbutton({onNewSearch = f => f }) {
   const [URL, setURL] = useState("oculus");
-  const [URI, setURI] = useState("Nintendo");
+  const [URI, setURI] = useState("Insert search Item here");
 
   const submit = (e) => {
     e.preventDefault();

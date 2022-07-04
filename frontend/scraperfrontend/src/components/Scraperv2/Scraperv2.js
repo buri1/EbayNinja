@@ -3,8 +3,6 @@ import Listings from '../Listings/Listings';
 
 
 export default function Scraperv2(props) {
-  const [URI, setURI] = useState("Nintendo");
-  const [URL, setURL] = useState("Nintendo");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

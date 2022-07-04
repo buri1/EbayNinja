@@ -10,23 +10,23 @@ const Listings = ({ datas }) => {
       <div class="List-items flex flex-row">
         <ul>
           {datas.map((data) => (
-            <li class="py-1 px--1" key={data.Id}>
-              <div>
+            <li class="py-1 pt-0" key={data.Id}>
+              <div class="">
                
                 <a
                   key={data.Id}
                   href="#"
                   class="flex flex-col items-center bg-gray-200 rounded-lg border-4 border-teal-600  md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
                 >
-                   <div>
-                       <div class="flex w-48 flex-col">
+                   <div class="flex-1">
+                       <div class="flex w-48 h-48 flex-col">
                          <img
-                           class="flex-1  lg:w-48  pt-2 pl-2 rounded-t-lg  md:w-48 md:rounded-none md:rounded-l-lg dark:text-gray-600"
+                           class="flex-1 border-4 border-teal-600 lg:w-48 rounded-lg  mt-2 ml-2    h-48 dark:text-gray-600"
                             src={data.AdImg}
                            alt="Couldnt Load Ad Image"
                          />
                         </div>
-                        <div><h2 class=" mt-2 pl-4 pb-1 text-2xl font-bold tracking-tight md:text-xl text-teal-800 dark:text-teal-200">{data.AdPrice}</h2></div>
+                        <div class="flex " ><h2 class=" align-text-bottom  mt-2 pl-4 pb-1 text-2xl font-bold tracking-tight md:text-xl text-teal-800 dark:text-teal-200">{data.AdPrice}</h2></div>
 
 
 
@@ -38,6 +38,7 @@ const Listings = ({ datas }) => {
                         href={data.AdUrlFinished}
                         target="blank"
                         rel="noopener noreferrer"
+
                       >
                         {" "}
                         {data.AdTitle}
@@ -50,8 +51,12 @@ const Listings = ({ datas }) => {
                     <button class="bg-teal-600 hover:bg-teal-900 text-white font-bold py-2 my-1 px-4 border border-teal-600 rounded">
                       Send Message
                     </button>
-                    <button class=" bg-teal-600 hover:bg-teal-900 text-white font-bold py-2 px-4 border border-teal-600 rounded">
-                      Open Offer
+                    <button class=" bg-teal-600 hover:bg-teal-900 text-white font-bold py-2 px-4 border border-teal-600 rounded"><a
+                        href={data.AdUrlFinished}
+                        target="blank"
+                        rel="noopener noreferrer"
+                      > 
+                      Open Offer </a>
                     </button>
                   </div>
                 </a>

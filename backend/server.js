@@ -4,6 +4,8 @@ const cheerio = require('cheerio')
 const express = require('express')
 const cors = require ('cors')
 const app = express()
+const createUser = require('./mongo')
+const bodyParser = require('body-parser')
 
 app.use(cors())
 
@@ -34,6 +36,10 @@ app.use('/results', require('./routes/scraperRoutes')
 app.use('/results/:SearchUrl', require('./routes/searchRoute')
 
 )
+
+app.post('/createUser', createUser.createUser
+
+);
 
 
 app.listen(PORT, () => {
