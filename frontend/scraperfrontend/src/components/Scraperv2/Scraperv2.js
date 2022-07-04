@@ -15,7 +15,7 @@ const URLL= props.Searchkey
   useEffect(
     (Searchkey) => {
       //replace localhost with local ip adress for no cors error in chrome
-      fetch(`http://localhost:8002/results/:${URLL}`, {
+      fetch(`http://localhost:8002/results/${URLL}`, {
         method: "POST",
       })
         .then((response) => {
@@ -35,7 +35,7 @@ const URLL= props.Searchkey
           setLoading(false);
         });
     },
-    []
+    [URLL]
   );
 
   if (loading) return "Loading...";
