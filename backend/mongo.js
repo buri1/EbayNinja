@@ -1,15 +1,18 @@
 const MongoClient = require('mongodb').MongoClient;
 
-const url ='mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/?retryWrites=true&w=majority';
+const url ="mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/?retryWrites=true&w=majority";
 
-const newUser = {
 
-    adTemplates: "req.body.adTemplates",
-    searchUrls: "req.body.searchUrls"
-};
-const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 const createUser = async (req, res, next) => {
+    const newUser = {
+
+        adTemplates: req.body.adTemplates,
+        searchUrls: req.body.searchUrls
+    };
+
+    const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
    
@@ -17,7 +20,7 @@ const createUser = async (req, res, next) => {
     await client.connect();
     const db = client.db("User");
     const result = await db.collection("User").insertOne(newUser);
-    res.json(newUser);
+    res.json(newUser)
     
 
 

@@ -9,6 +9,7 @@ const getUser = require('./mongo')
 const bodyParser = require('body-parser')
 
 app.use(cors())
+app.use(express.json()) 
 
 
 
