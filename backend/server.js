@@ -1,10 +1,8 @@
 const PORT = 8002
-const axios = require('axios')
-const cheerio = require('cheerio')
 const express = require('express')
 const cors = require ('cors')
 const app = express()
-const userRequests = require('./mongo')
+const userRequests = require('./mongoose')
 const getUser = require('./mongo')
 const bodyParser = require('body-parser')
 
@@ -43,9 +41,9 @@ app.post('/User', userRequests.createUser
 
 );
 
-app.get('/User', userRequests.getUser
+//app.get('/User', userRequests.getUser
 
-);
+//);
 
 
 app.listen(PORT, () => {

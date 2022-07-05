@@ -35,10 +35,16 @@ const createUser = async (req, res, next) => {
 
 const getUser = async (req, res, next) => {
     const client = new MongoClient (url);
+
+    let user;
+
     try {
      await client.connect();
-     const db = client.db();
-     const user = await db.collection('').find().toArray();
+     const db = client.db("User");
+
+     //watch out for spacing when interacting with mongodb
+     user = await db.collection("User").find().toArray();
+     console.log(user)
 
     } catch (error) {
         return res.json({message: 'could not get data.'});
