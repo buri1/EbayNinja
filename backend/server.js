@@ -2,7 +2,7 @@ const PORT = 8002
 const express = require('express')
 const cors = require ('cors')
 const app = express()
-const userRequests = require("./mongoose");
+const userRequests = require("./userRequests");
 
 
 app.use(cors());
