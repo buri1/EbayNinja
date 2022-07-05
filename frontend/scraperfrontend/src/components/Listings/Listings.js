@@ -21,9 +21,9 @@ const Listings = ({ datas }) => {
                    <div class="flex-1">
                        <div class="flex w-48 h-48 flex-col">
                          <img
-                           class="flex-1 border-4 border-teal-600 lg:w-48 rounded-lg  mt-2 ml-2    h-48 dark:text-gray-600"
+                           class="flex-1 border-4 border-teal-600 rounded-lg  mt-2 ml-2  w- h-48 dark:text-gray-600"
                             src={data.AdImg}
-                           alt="Couldnt Load Ad Image"
+                           alt="No Ad Image"
                          />
                         </div>
                         <div class="flex " ><h2 class=" align-text-bottom  mt-2 pl-4 pb-1 text-2xl font-bold tracking-tight md:text-xl text-teal-800 dark:text-teal-200">{data.AdPrice}</h2></div>
