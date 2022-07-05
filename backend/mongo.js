@@ -1,3 +1,5 @@
+//deprecated, switched over to mongoose
+
 const MongoClient = require('mongodb').MongoClient;
 
 const url ="mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/?retryWrites=true&w=majority";
