@@ -19,7 +19,7 @@ const App = () => {
     <>
     <BrowserRouter>
     <Header/>
-    <div class="flex flex-row bg-gray-400">
+    <div class="flex h-full flex-row bg-gray-400">
     <Sidebar/>
     <Routes>
       
@@ -31,7 +31,8 @@ const App = () => {
               
           }>
       </Route>
-      <Route path="/Inbox" element={<Inbox />
+      
+      <Route path="/Inbox" element={<Inbox class="flex flex-1 "/>
 
       }>
       </Route>
