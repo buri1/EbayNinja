@@ -3,6 +3,9 @@ const express = require('express')
 const cors = require ('cors')
 const app = express()
 const userRequests = require("./userRequests");
+const messageTemplateRequests = require('./messageTemplateRequests');
+const AdTemplateRequests = require ('./AdTemplateRequests')
+const SearchUrlRequests = require ('./SearchUrlRequests')
 
 
 app.use(cors());
