@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const AdTemplate = require ("./models/User");
+const AdTemplate = require ("./models/AdTemplate");
 
 mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?retryWrites=true&w=majority'
 ).then(() => {
@@ -12,16 +12,13 @@ mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?ret
 
 const createAdTemplate = async (req, res, next) => {
     const createdAdTemplate = new AdTemplate ({
+
+      adTemplates: { 
     
-        title: {type: String, required:false},
-        description: {type: String, required:false},
-        price: {type: String, required:false},
-        //later replaced through embedded documents from which one needs to be true (vb/verschenken/suche)
-        adType: {type: Number , required:false},
-        Imagess: {type: String, required:false},
-        SearchorSell: {type: Boolean, required:false},
-        category: {type: String, required:false},
-        required:false
+        title: req.body.adTemplate.title,
+
+      
+      }
 
     });
 
