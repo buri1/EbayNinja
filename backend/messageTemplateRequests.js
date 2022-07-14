@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const MessageTemplate = require("./models/User");
+const MessageTemplate = require("./models/MessageTemplate");
 
 mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?retryWrites=true&w=majority'
 ).then(() => {
@@ -12,10 +12,11 @@ mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?ret
 
 const createMessageTemplate = async (req, res, next) => {
     const createdMessageTemplate = new MessageTemplate ({
+      messageTemplates:{
     
-        templateTitle: {type: String, required:false},
-        templateDescription: {type: String, required:false},
-        
+        templatetitle: req.body.messagetemplates.templatetitle,
+        templatedescription: req.body.messagetemplates.templatedescription
+      }
 
     });
 
