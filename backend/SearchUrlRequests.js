@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const SearchUrlTemplate = require ("./models/User");
+const SearchUrlTemplate = require ("./models/SearchUrls");
 
 mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?retryWrites=true&w=majority'
 ).then(() => {
@@ -12,8 +12,11 @@ mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?ret
 
 const createSearchUrl = async (req, res, next) => {
     const createdSearchUrl = new SearchUrlTemplate ({
+
+        SearchUrls: {
+            searchUrls: req.body.SearchUrls.searchUrls
+        }
     
-        searchUrls: {type: String, required:false},
 
 
     });

@@ -2,6 +2,7 @@ import React from "react";
 import "./Listings.css";
 import "../../index.css";
 import Sidebar from "../Sidebar/Sidebar";
+import { Link } from "react-router-dom";
 
 const Listings = ({ datas }) => {
   return (
@@ -15,7 +16,9 @@ const Listings = ({ datas }) => {
                
                 <a
                   key={data.Id}
-                  href="#"
+                  href={data.AdUrlFinished}
+                  target="blank"
+                  rel="noopener noreferrer"
                   class="flex flex-col items-center bg-gray-200 rounded-lg border-4 border-teal-600  md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
                 >
                    <div class="flex-1">
@@ -51,12 +54,12 @@ const Listings = ({ datas }) => {
                     <button class="bg-teal-600 hover:bg-teal-900 text-white font-bold py-2 my-1 px-4 border border-teal-600 rounded">
                       Send Message
                     </button>
-                    <button class=" bg-teal-600 hover:bg-teal-900 text-white font-bold py-2 px-4 border border-teal-600 rounded"><a
-                        href={data.AdUrlFinished}
+                    <button class=" bg-teal-600 hover:bg-teal-900 text-white font-bold py-2 px-4 border border-teal-600 rounded"><Link
+                        to={data.AdUrlFinished}
                         target="blank"
                         rel="noopener noreferrer"
                       > 
-                      Open Offer </a>
+                      Open Offer </Link>
                     </button>
                   </div>
                 </a>
