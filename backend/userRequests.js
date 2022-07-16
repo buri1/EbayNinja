@@ -1,3 +1,4 @@
+const { HTTPError } = require("got/dist/source");
 const mongoose = require("mongoose");
 
 const User = require("./models/User");
@@ -10,6 +11,25 @@ mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?ret
 });
 
 const createUser = async (req, res, next) => {
+
+  let existingUser
+  try {
+    existingUser = await User.findOne({ email: email})
+  } catch(err) {
+    const error = new error = new HttpError (
+      'Singing up failed, please try again later.',
+      500
+          );
+          return next (error);
+  }
+  if (existingUser) {
+    const error = new HTTPError(
+      'User exits already, please login instead.',
+      422
+    );
+    return next(error);
+  
+  }
   const createdUser = new User({
     name: req.body.name,
     email: req.body.email,
