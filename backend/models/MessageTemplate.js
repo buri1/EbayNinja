@@ -10,6 +10,7 @@ const messageTemplateSchema = new mongoose.Schema({
        required:false
        
     },
+    creator: {type:mongoose.Types.ObjectId, required:true, ref: "User"}
 
 });
 

@@ -27,14 +27,11 @@ const userSchema = new mongoose.Schema({
        required:false
     },
 
-    messageTemplates: { 
-        templateTitle: {type: String, required:false},
-        templateDescription: {type: String, required:false},
-        required:false
+    messageTemplates: {type:mongoose.Types.ObjectId, required:true, ref: "User"}
 
-    },
+    ,
 
-    searchUrls: { type: String, required:false }
-});
+    searchUrls: { type: String, required:false }}
+);
 
 module.exports= mongoose.model('Users', userSchema, "user");
