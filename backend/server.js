@@ -19,10 +19,12 @@ app.use("/results", require("./routes/scraperRoutes"));
 
 app.use("/results/:SearchUrl", require("./routes/searchRoute"));
 
-//User creates and returns the User
+//Login and other User requests
 
-app.post("/User", userRequests.createUser);
+app.post("/Signup", userRequests.createUser);
+app.post('/Login', userRequests.loginUser);
 app.get("/User", userRequests.getUser);
+app.post('/Users',userRequests.getUsers);
 
 //MessageTemplates returns and posts Templates
 
