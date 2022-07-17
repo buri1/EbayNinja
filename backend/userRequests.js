@@ -10,14 +10,15 @@ mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?ret
     console.log('connection failed!')
 });
 
+// create/register user
 const createUser = async (req, res, next) => {
 
   let existingUser
   try {
-    existingUser = await User.findOne({ email: email})
+    existingUser = await User.findOne({ email: req.body.email})
   } catch(err) {
-    const error = new error = new HttpError (
-      'Singing up failed, please try again later.',
+    const error = new HTTPError (
+      'Signing up failed, please try again later.',
       500
           );
           return next (error);
@@ -35,20 +36,46 @@ const createUser = async (req, res, next) => {
     email: req.body.email,
     password: req.body.password,
 
-    messageTemplates: req.body.messageTemplate,
-    adTemplates: req.body.adTemplates,
-    searchUrls: req.body.searchUrls
+    //messageTemplates: req.body.messageTemplate,
+    //adTemplates: req.body.adTemplates,
+    //searchUrls: req.body.searchUrls
   });
-  const result = await createdUser.save();
 
-  res.json(createdUser);
+  try {
+    await createdUser.save();
+  }
+ catch(err) {
+  const error = new HTTPError(
+    'Signing Up failed, please try agian',500
+  );
+ }
+
+  res.status(201).json({user: createdUser.toObject({getters:true})});
 };
+
+//Login User
+const loginUser = async (req, res, next) => {
+  let existingUser
+  try {
+    existingUser = await User.findOne({ email: email})
+  } catch(err) {
+    const error = new HTTPError (
+      'Singing up failed, please try again later.',
+      500
+          );
+          return next (error);
+  }
+
+  const user = await User.find().exec();
+  res.json(user);
+};
+
 //.exec bc mongoose otherwise doesnt return a "real" promise on .find, with exec it does which enables async/await
 const getUser = async (req, res, next) => {
     const user = await User.find().exec();
     res.json(user);
   };
 
-
+exports.loginUser= loginUser;
 exports.createUser= createUser;
 exports.getUser= getUser;

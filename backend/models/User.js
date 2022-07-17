@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
+const uniqueValidator = require ('mongoose-unique-validator');
 
 const userSchema = new mongoose.Schema({
 
     name: { type: String, required:false },
     email: { type: String, required:false, unique: true },
-    password: { type: String, required:false, minlength: 6 },
+    password: { type: String, required:true, minlength: 6 },
     ebaylogin: {
         Accounts: {
             Account: {
@@ -27,11 +28,13 @@ const userSchema = new mongoose.Schema({
        required:false
     },
 
-    messageTemplates: {type:mongoose.Types.ObjectId, required:true, ref: "User"}
+    messageTemplates: {type:mongoose.Types.ObjectId, required:false, ref: "User"}
 
     ,
 
     searchUrls: { type: String, required:false }}
 );
+
+
 
 module.exports= mongoose.model('Users', userSchema, "user");
