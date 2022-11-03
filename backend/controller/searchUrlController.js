@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
-const SearchUrlTemplate = require ("./models/SearchUrls");
+const SearchUrlTemplate = require ("../models/SearchUrls");
 
 mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?retryWrites=true&w=majority'
 ).then(() => {
-    console.log("Connected to Database!")
+    console.log("Connected to Database ss !")
 }).catch(() => {
     console.log('connection failed!')
 });
@@ -13,7 +13,7 @@ mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?ret
 const createSearchUrl = async (req, res, next) => {
     const createdSearchUrl = new SearchUrlTemplate ({
 
-        SearchUrls: {
+        SearchUrls:  {
             searchUrls: req.body.SearchUrls.searchUrls
         }
     
@@ -28,13 +28,14 @@ const createSearchUrl = async (req, res, next) => {
 };
 
 //getAdTemplate needs to be fixed to show the correct ones
-const getSearchUrl = async (req, res, next) => {
-  const searchUrls = await SearchUrlTemplate.find().exec();
-  res.json(searchUrls);
-};
+// const getSearchUrl = async (req, res, next) => {
+//   const searchUrls = await SearchUrlTemplate.find().exec();
+//   res.json(searchUrls);
+// };
 
 
 
 
 exports.createSearchUrl= createSearchUrl;
-exports.getSearchUrls= getSearchUrl;
+//exports.getSearchUrls= getSearchUrl;
+ 
