@@ -23,7 +23,7 @@ function Mainpage() {
         </Route>
         <Route path="/a" element={<Inbox class="flex flex-1 " />}>
         </Route>
-        <Route path="/App/Searchagent" element={<Searchagent />}>
+        <Route path="/Searchagent" element={<Searchagent />}>
         </Route>
       </Routes>
     </div>
