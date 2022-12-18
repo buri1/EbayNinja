@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 
 function Loginpage() {
   return (
-    <div><section class="h-screen">
+    <div class="bg-teal-700"><section class="h-screen">
     <div class="px-6 h-full text-gray-800">
       <div
         class="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6"
@@ -37,7 +37,7 @@ function Loginpage() {
                 </svg>
               </button>
   
-              <button
+              <button  
                 type="button"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
@@ -105,7 +105,7 @@ function Loginpage() {
             </div>
   
             <div class="text-center lg:text-left">
-                <Link to="/Dashboard">
+                <Link to="/App">
               <button
                 type="button"
                 class="inline-block px-7 py-3 bg-teal-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"

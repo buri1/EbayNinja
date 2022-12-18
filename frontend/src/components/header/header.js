@@ -8,7 +8,7 @@ export default function Header() {
   <div class="flex items-center h-16 max-w-screen-xl gap-8 px-4 mx-auto sm:px-6 lg:px-8">
     
     <a class=" antialiased text-teal-600 text-lg font-bold transition hover:text-gray-500/75" href="/">
-              EbayNinja
+              Ebay Ninja
     </a>
     
 
@@ -18,7 +18,7 @@ export default function Header() {
 
         <ul class="flex items-center gap-6 ">
 
-          <li>
+          <li>  
             <a class="text-gray-900 font-normal text-base transition hover:text-gray-500/75" href="/">
               New Listing
             </a>
