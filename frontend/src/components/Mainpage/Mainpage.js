@@ -21,7 +21,7 @@ function Mainpage() {
       <Routes>
         <Route path="/" element={<Dashboard /> }>
         </Route>
-        <Route path="/a" element={<Inbox class="flex flex-1 " />}>
+        <Route path="/Inbox" element={<Inbox class="flex flex-1 " />}>
         </Route>
         <Route path="/Searchagent" element={<Searchagent />}>
         </Route>
