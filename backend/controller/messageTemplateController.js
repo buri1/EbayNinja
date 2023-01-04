@@ -4,7 +4,7 @@ const MessageTemplate = require("../models/MessageTemplate");
 
 mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?retryWrites=true&w=majority'
 ).then(() => {
-    console.log("Connected to Database m !")
+    console.log("Connected to Database messagetemplatecontroller !")
 }).catch(() => {
     console.log('connection failed!')
 });

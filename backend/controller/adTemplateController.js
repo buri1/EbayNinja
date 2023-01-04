@@ -4,7 +4,7 @@ const AdTemplate = require ("../models/AdTemplate");
 
 mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?retryWrites=true&w=majority'
 ).then(() => {
-    console.log("Connected to Database a !")
+    console.log("Connected to Database adtemplateController !")
 }).catch(() => {
     console.log('connection failed!')
 });

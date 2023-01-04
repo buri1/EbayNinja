@@ -74,7 +74,7 @@ export default function Header() {
 
           <a
             class="hidden sm:block px-5 py-2.5 text-sm font-medium text-teal-600 bg-gray-100 rounded-md hover:text-teal-600/75 transition"
-            href="/">
+            href="/signuppage">
             Register
           </a>
         </div>

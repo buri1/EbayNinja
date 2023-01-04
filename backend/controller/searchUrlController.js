@@ -4,7 +4,7 @@ const SearchUrlTemplate = require ("../models/SearchUrls");
 
 mongoose.connect('mongodb+srv://12347:12347@cluster0.9xxdj.mongodb.net/Users?retryWrites=true&w=majority'
 ).then(() => {
-    console.log("Connected to Database ss !")
+    console.log("Connected to Database searchUrlController !")
 }).catch(() => {
     console.log('connection failed!')
 });
