@@ -27,7 +27,7 @@ function SignUpForm() {
     }
     
     try {
-      const response = await fetch('http://localhost:8002/createUser', {
+      const response = await fetch('http://localhost:8002/Signup', {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: {

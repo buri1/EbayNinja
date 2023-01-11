@@ -1,5 +1,6 @@
 const { HTTPError } = require("got/dist/source");
 const mongoose = require("mongoose");
+const bcrypt = require('bcryptjs')
 
 const User = require("../models/User");
 
@@ -47,20 +48,32 @@ const signUpUser = async (req, res, next) => {
   }
 
   else {
-  const signUpUser = new User({
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password,
-  });
 
-  try {
-    await signUpUser.save();
-  } catch (err) {
-    let error = new HTTPError("Signing Up failed, please try agian", 500);
-    return next(error);
+    let hashedPassword;
+    try {
+      hashedPassword = await bcrypt.hash(req.body.password, 12);
+    } catch (err) {
+      const error = new HTTPError(
+        "could not create user, please try again.", 500
+      );
+      return next(error);
+    }
+
+    let signedUpUser = new User({
+      name: req.body.name,
+      email: req.body.email,
+      password: hashedPassword,
+    });
+
+    try {
+      await signedUpUser.save();
+    } catch (err) {
+      let error = new HTTPError("Signing Up failed, please try again", 501);
+      return next(error);
+    }
+
+    res.status(201).json({ user: signedUpUser.toObject({ getters: true }) });
   }
-  
-  res.status(201).json({ user: signUpUser.toObject({ getters: true }) });}
 };
 
 /* 
