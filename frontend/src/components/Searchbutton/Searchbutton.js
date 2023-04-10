@@ -33,38 +33,7 @@ export default function Searchbutton({onNewSearch = f => f }) {
       </form>
       <div>
         {
-          /* function Searchbutton() { */
-          //     const [URL, setURL] = useState("oculus");
-          //     const [URI, setURI] = useState("Nintendo");
 
-          //     function urlInputHandler (event) {
-          //       setURI(event.target.value)
-          //     };
-
-          //     function HandleSubmit(event) {
-          //       event.preventDefault();
-          //       setURL (URI)
-
-          //     }
-          //   return (
-          //       <div>
-
-          //     <div>
-
-          //       <form onSubmit={HandleSubmit}>
-          //         <input
-          //           type="text"
-          //           id="${URL}"
-          //           value={URI}
-
-          //           placeholder="Search Article"
-          //           onChange={urlInputHandler}
-          //         />
-
-          //         <button type="submit" >Create Search</button>
-          //       </form>
-          //     </div>
-          //     <div>
           <Scraperv2 Searchkey={URL} />
         }
       </div>

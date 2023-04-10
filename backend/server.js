@@ -24,11 +24,8 @@ app.use("/results/:SearchUrl", require("./routes/searchRoute"));
 //Login and other User requests
 
  app.post("/Signup", userRequests.signUpUser);
- app.post("/CreateUser", userRequests.createUser);
+ 
 //app.post('/Login', userRequests.loginUser); 
-/* app.get("/User", userRequests.getUser);
-app.post('/Users',userRequests.getUsers);
- */
 //MessageTemplates returns and posts Templates
 
 app.post("/MessageTemplate", messageTemplateRequests.createMessageTemplate);

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Listings from '../Listings/Listings';
 
 
@@ -8,7 +8,7 @@ export default function Scraperv2(props) {
   const [error, setError] = useState(null);
   //const id= {URL:"Nintendo"}
 
-const URLL= props.Searchkey
+  const URLL = props.Searchkey
 
   useEffect(
     (Searchkey) => {
@@ -41,33 +41,8 @@ const URLL= props.Searchkey
   console.log(data);
 
   return (
-<div class="flex flex-col">
-    <div class="flex">
-    {/* <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={URL}
-          placeholder="Search Article"
-          onChange={(e) => setURL(e.target.value)}
-        />
-
-        <button type="submit">Create Search</button>
-
-      </form> */}
-        {/* <form >
-          <input class="flex flex-row"
-            type="text"
-            value={URL}
-            onChange={(e) => setURL(e.target.value)}
-          />
-    
-          <button onSubmit={() => setURI(URL)} type="submit" class="absolut flex flex-row p-2 text-white -translate-y-1/2 bg-teal-600 rounded-full top-1/2 right-4" >
-                 
-                  </button>
-        </form> */}
+    <div class="flex flex-col">
+      <div class="flex">  <Listings datas={data} /></div>
     </div>
-    <div class="flex">  <Listings datas={data} /></div>
-    
-</div>
   );
 }

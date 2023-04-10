@@ -33,7 +33,7 @@ router.post("/results/:SearchUrl", (req, res) => {
           .replace(/\n/g, "");
         const AdUrl = $(this).find(".ellipsis").attr("href");
         const AdPrice = $(this)
-          .find(".aditem-main--middle--price")
+          .find("p.aditem-main--middle--price-shipping--price")
           .text()
           .replace(/\n/g, "");
         const AdUrlFinished = "https://www.ebay-kleinanzeigen.de" + AdUrl;

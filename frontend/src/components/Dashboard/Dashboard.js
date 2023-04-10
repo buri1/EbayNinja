@@ -1,5 +1,5 @@
 import React from 'react'
-import Scraper from '../scraper/scraper'
+import Scraper from '../Scraper/Scraper'
 import Widgets from '../Widgets/Widgets'
 
 function Dashboard() {
