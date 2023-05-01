@@ -1,6 +1,6 @@
 import React from 'react'
-import Inboxwidget from './Widgetcomponents/Inboxwidget'
-import Notifications from './Widgetcomponents/Notifications'
+import Inboxwidget from './widgetcomponents/Inboxwidget'
+import Notifications from './widgetcomponents/Notifications'
 
 function Widgets() {
   return (

@@ -6,12 +6,24 @@ const userRequests = require("./controller/userController");
 const messageTemplateRequests = require('./controller/messageTemplateController');
 const AdTemplateRequests = require ('./controller/adTemplateController')
 const SearchUrlRequests = require ('./controller/searchUrlController.js')
+const dotenv = require ('dotenv')
+const puppeteer = require('puppeteer');
+const { loginAndScrape } = require('./ebayscraper'); // Importieren Sie die loginAndScrape-Funktion aus dem vorherigen Beispiel
 
-
+dotenv.config();
 app.use(cors());
 
 
 app.use(express.json());
+
+
+app.get('/login', async (req, res) => {
+  const username = process.env.EBAY_USERNAME;
+  const password = process.env.EBAY_PASSWORD;
+  const messages = await loginAndScrape(username, password);
+
+  res.json({ success: true, messages });
+});
 
 //result and result:searchurl, might need to be changed to mongoose?
 

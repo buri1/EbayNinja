@@ -1,5 +1,5 @@
 import React from 'react'
-import Scraper from '../Scraper/Scraper'
+import Scraper from '../scraper/scraper'
 import Scraperv2 from '../Scraperv2/Scraperv2'
 import Searchbutton from '../Searchbutton/Searchbutton'
 

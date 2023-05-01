@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../Header/Header';
+import Header from '../header/header';
 import Sidebar from '../Sidebar/Sidebar';
 import Dashboard from '../Dashboard/Dashboard';
 import Inbox from '../Inbox/Inbox';
