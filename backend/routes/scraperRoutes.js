@@ -11,7 +11,7 @@ const router= express.Router()
 
 
 router.get('/', (req,res) => {
-    axios("https://www.ebay-kleinanzeigen.de/apple/k0")
+    axios("https://www.kleinanzeigen.de/apple/k0")
     .then(response => {
     
       const html = response.data
@@ -27,7 +27,7 @@ router.get('/', (req,res) => {
         const AdPlace=$(this).find('.aditem-main--top--left').text().replace( /\n/g,'')
         const AdUrl =$(this).find('.ellipsis').attr('href')
         const AdPrice =$(this).find('.aditem-main--middle--price-shipping--price').text().replace(/\n/g ,'').replace(/\s\s+/g, '')
-        const AdUrlFinished= "https://www.ebay-kleinanzeigen.de"+  AdUrl
+        const AdUrlFinished= "https://www.kleinanzeigen.de"+  AdUrl
 
     
     
@@ -50,7 +50,7 @@ router.get('/', (req,res) => {
 
 
     router.post('/:id', (req,res) => {
-        axios(`https://www.ebay-kleinanzeigen.de/${req.params.id}/k0`)
+        axios(`https://www.kleinanzeigen.de/${req.params.id}/k0`)
         .then(response => {
         
           const html = response.data
