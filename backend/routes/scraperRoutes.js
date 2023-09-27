@@ -12,6 +12,7 @@ const router= express.Router()
 
 router.get('/', (req,res) => {
     axios("https://www.kleinanzeigen.de/s-apple/k0")
+
     .then(response => {
     
       const html = response.data
@@ -51,7 +52,7 @@ router.get('/', (req,res) => {
     
 
     router.post('/:id', (req,res) => {
-        axios(`https://www.ebay-kleinanzeigen.de/${req.params.id}/k0`)
+        axios(`https://www.kleinanzeigen.de/${req.params.id}/k0`)
         .then(response => {
         
           const html = response.data
