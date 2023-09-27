@@ -9,13 +9,13 @@ const Listings = ({ datas }) => {
       <div class="List-items flex flex-row">
         <ul>
           {datas.map((data) => (
-            <li class="py-1 pt-0" key={data.Id}>
+            <li class="py-1 pt-0 overflow-hidden " key={data.Id}>
               <div class="">
                 <a
                   key={data.Id}
                   href={data.AdUrlFinished}
                   target="blank"
-                  class="flex flex-col items-center bg-gray-200 rounded-lg border-4 border-teal-600  md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+                  class="flex flex-col items-center bg-gray-200 overflow-hidden rounded-lg border-4 border-teal-600  md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
                 >
                   <div class="flex-1">
                     <div class="flex w-48 h-48 flex-col">
@@ -45,16 +45,17 @@ const Listings = ({ datas }) => {
                       {data.AdDescription}
                     </p>
 
-
-                    <button class="bg-teal-600 hover:bg-teal-900 text-white font-bold py-2 my-1 px-4 border border-teal-600 rounded">
+                    <div className="flex-wrap">
+                    <button class="bg-teal-600 hover:bg-teal-900 text-white font-bold py-2 my-1 mr-1 px-4 border border-teal-600 rounded">
                       Send Message
                     </button>
-                    <button class=" bg-teal-600 hover:bg-teal-900 text-white font-bold py-2 px-4 border border-teal-600 rounded"><Link
+                    <button class="justify-end bg-teal-600 hover:bg-teal-900 text-white font-bold py-2 px-4 border border-teal-600 rounded"><Link
                       to={data.AdUrlFinished}
                       target="blank"
                     >
                       Open Offer </Link>
                     </button>
+                    </div>
                   </div>
                 </a>
               </div>
