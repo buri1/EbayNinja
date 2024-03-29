@@ -18,10 +18,10 @@ router.get('/', (req,res) => {
       const $ = cheerio.load(html)
       const listings =[]
     
-      $('.lazyload-item', html).each(function(){
+      $('.aditem').each(function(){
     
         const AdTitle = $(this).find('.ellipsis').text()
-        const AdImg = $(this).find('.aditem-image div').attr("data-imgsrc")
+        const AdImg = $(this).find('.imagebox img').attr("src")
         const AdDescription =$(this).find('.aditem-main--middle--description').text().replace( /\n/g,'')
         const AdTime =$(this).find('.aditem-main--top--right').text().replace( /\n/g,'')
         const AdPlace=$(this).find('.aditem-main--top--left').text().replace( /\n/g,'')
@@ -57,10 +57,10 @@ router.get('/', (req,res) => {
           const $ = cheerio.load(html)
           const listings =[]
         
-          $('.lazyload-item', html).each(function(){
+          $('.aditem').each(function(){
         
             const AdTitle = $(this).find('.ellipsis').text()
-            const AdImg = $(this).find('.aditem-image div').attr("data-imgsrc")
+            const AdImg = $(this).find('.imagebox img').attr("src")
             const AdDescription =$(this).find('.aditem-main--middle--description').text().replace( /\n/g,'')
             const AdTime =$(this).find('.aditem-main--top--right').text().replace( /\n/g,'').replace(/\s\s+/g, '')
             const AdPlace=$(this).find('.aditem-main--top--left').text().replace( /\n/g,'').replace(/\s\s+/g, '')

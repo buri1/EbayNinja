@@ -11,7 +11,6 @@ export default function Scraper() {
 useEffect(() => {
   //replace localhost with local ip adress for no cors error in chrome
   fetch('http://localhost:8002/results')
-
   .then(response =>{
     if(response.ok){
       return response.json();
